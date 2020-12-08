@@ -85,6 +85,7 @@ mybatisx
 
 前端：
 vscode
+
 ```
 ### 6、项目结构创建与git
 ```
@@ -103,4 +104,9 @@ spring cloud routing/openfeign
 共同：
 1）web、openfeign
 2）包名com.atguigu.gulimall.xxx(product\order\ware\coupon\member)
+```
+
+### 7、数据库设计
+```
+
 ```
