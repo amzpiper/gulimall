@@ -1,13 +1,17 @@
 HELP.md
 target/
 **/target/
-.mvn/wrapper/maven-wrapper.jar
 **/src/main/**/target/
 **/src/test/**/target/
 
+**/mvnw
+**/mvnw.cmd
+.mvn
+.mvn/wrapper/maven-wrapper.jar
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
+**/.gitignore

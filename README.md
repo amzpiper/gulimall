@@ -107,6 +107,28 @@ spring cloud routing/openfeign
 ```
 
 ### 7、数据库设计
+```shell
+#每个微服务之操作自己的数据库。
+优惠/营销数据库：gulimall_sms
+商品数据库：gulimall_pms
+库存管理数据库：gulimall_wms
+用户数据库：gulimall_ums
+订单数据库：gulimall_oms
+
+#docker容器自己自动启动
+sudo docker update redis --restart=always
+sudo docker update mysql --restart=always
 ```
 
+## 8、人人开源搭建后台管理系统
+
 ```
+java后台管理系统
+renren-fast
+https://gitee.com/renrenio/renren-fast
+
+前端分离的项目前端界面
+renren-fast-vue
+https://gitee.com/renrenio/renren-fast-vue
+```
+
