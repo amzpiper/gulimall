@@ -121,7 +121,7 @@ sudo docker update mysql --restart=always
 ```
 
 ## 8、人人开源搭建后台管理系统
-
+p16
 ```
 java后台管理系统
 renren-fast
@@ -131,4 +131,8 @@ https://gitee.com/renrenio/renren-fast
 renren-fast-vue
 https://gitee.com/renrenio/renren-fast-vue
 ```
+## 9、逆向工程搭建&使用
+```
+https://gitee.com/renrenio/renren-generator
 
+```
