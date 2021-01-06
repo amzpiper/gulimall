@@ -3,7 +3,7 @@ package com.atguigu.gulimall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+//import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +23,7 @@ import com.atguigu.common.utils.R;
  *
  * @author guoyuhang
  * @email 15512702732@163.com
- * @date 2021-01-06 19:29:44
+ * @date 2021-01-06 20:13:05
  */
 @RestController
 @RequestMapping("product/skuimages")
@@ -35,7 +35,7 @@ public class SkuImagesController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("product:skuimages:list")
+    //@RequiresPermissions("product:skuimages:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = skuImagesService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class SkuImagesController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("product:skuimages:info")
+    //@RequiresPermissions("product:skuimages:info")
     public R info(@PathVariable("id") Long id){
 		SkuImagesEntity skuImages = skuImagesService.getById(id);
 
@@ -58,7 +58,7 @@ public class SkuImagesController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("product:skuimages:save")
+    //@RequiresPermissions("product:skuimages:save")
     public R save(@RequestBody SkuImagesEntity skuImages){
 		skuImagesService.save(skuImages);
 
@@ -69,7 +69,7 @@ public class SkuImagesController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("product:skuimages:update")
+    //@RequiresPermissions("product:skuimages:update")
     public R update(@RequestBody SkuImagesEntity skuImages){
 		skuImagesService.updateById(skuImages);
 
@@ -80,7 +80,7 @@ public class SkuImagesController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("product:skuimages:delete")
+    //@RequiresPermissions("product:skuimages:delete")
     public R delete(@RequestBody Long[] ids){
 		skuImagesService.removeByIds(Arrays.asList(ids));
 

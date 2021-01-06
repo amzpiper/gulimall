@@ -3,6 +3,7 @@ package com.atguigu.gulimall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+//import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,7 +23,7 @@ import com.atguigu.common.utils.R;
  *
  * @author guoyuhang
  * @email 15512702732@163.com
- * @date 2021-01-06 19:29:44
+ * @date 2021-01-06 20:13:05
  */
 @RestController
 @RequestMapping("product/attr")
@@ -34,6 +35,7 @@ public class AttrController {
      * 列表
      */
     @RequestMapping("/list")
+    //@RequiresPermissions("product:attr:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = attrService.queryPage(params);
 
@@ -45,6 +47,7 @@ public class AttrController {
      * 信息
      */
     @RequestMapping("/info/{attrId}")
+    //@RequiresPermissions("product:attr:info")
     public R info(@PathVariable("attrId") Long attrId){
 		AttrEntity attr = attrService.getById(attrId);
 
@@ -55,6 +58,7 @@ public class AttrController {
      * 保存
      */
     @RequestMapping("/save")
+    //@RequiresPermissions("product:attr:save")
     public R save(@RequestBody AttrEntity attr){
 		attrService.save(attr);
 
@@ -65,6 +69,7 @@ public class AttrController {
      * 修改
      */
     @RequestMapping("/update")
+    //@RequiresPermissions("product:attr:update")
     public R update(@RequestBody AttrEntity attr){
 		attrService.updateById(attr);
 
@@ -75,6 +80,7 @@ public class AttrController {
      * 删除
      */
     @RequestMapping("/delete")
+    //@RequiresPermissions("product:attr:delete")
     public R delete(@RequestBody Long[] attrIds){
 		attrService.removeByIds(Arrays.asList(attrIds));
 
