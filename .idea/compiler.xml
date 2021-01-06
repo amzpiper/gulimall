@@ -14,10 +14,12 @@
         <module name="renren-fast" />
         <module name="renren-generator" />
         <module name="gulimall-member" />
+        <module name="gulimall-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gulimall" target="1.5" />
+      <module name="gulimall-common" target="1.5" />
       <module name="gulimall-coupon" target="11" />
       <module name="gulimall-member" target="11" />
       <module name="gulimall-order" target="11" />
