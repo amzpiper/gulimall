@@ -132,9 +132,11 @@ renren-fast-vue
 https://gitee.com/renrenio/renren-fast-vue
 ```
 ## 9、逆向工程搭建&使用
+p17
 ```
 https://gitee.com/renrenio/renren-generator
 生成的代码main等
 创建gulimall-common maven项目把公共引用的类放到这里
-
+注释掉generator的模板
 ```
+
