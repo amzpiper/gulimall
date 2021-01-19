@@ -137,6 +137,20 @@ p17
 https://gitee.com/renrenio/renren-generator
 生成的代码main等
 创建gulimall-common maven项目把公共引用的类放到这里
+其他微服务引用gulimall-common
+
 注释掉generator的模板
+修改数据库、包名字、模块名、表前缀
+```
+## 10、配置测试微服务的CRUD
+p18
+```
+1.整合mybatis plus
+1).导入以来到common
+2).配置mybatis plus
+    1.配置数据源
+        导入驱动
+        
+    2.配置其他
 ```
 
