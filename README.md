@@ -150,7 +150,9 @@ p18
 2).配置mybatis plus
     1.配置数据源
         导入驱动
-        
+        在yml配置数据源
     2.配置其他
+        配置MapperScan
+        
 ```
 
