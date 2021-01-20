@@ -152,7 +152,7 @@ p18
         导入驱动
         在yml配置数据源
     2.配置其他
-        配置MapperScan
-        
+        配置MapperScan（接口）
+        告诉mybatisplus配置映射文件位置
 ```
 
