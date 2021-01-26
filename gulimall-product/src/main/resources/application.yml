@@ -5,4 +5,10 @@ spring:
     username: root
     password: root
 mybatis-plus:
-  mapper-locations: classpath:/
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+
+server:
+  port: 10000
