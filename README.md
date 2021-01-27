@@ -151,7 +151,7 @@ p18
     2.配置其他
         配置MapperScan（接口）
         告诉mybatisplus配置映射文件位置
-        自增
+        配置自增
 ```
 ## 11、逆向生成所有微服务的CRUD
 p19
@@ -196,4 +196,5 @@ p21
 ```
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme-zh.md
 配置地址、应用名
+
 ```
