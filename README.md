@@ -190,3 +190,10 @@ Spring Cloud Sleuth:调用链监控
 https://github.com/seata/seata
 Spring Cloud Alibaba-Seate:原Fescar，分布式解决方案
 ```
+
+## 13、分布式组件 -SpringCloud Alibaba-Nacos-注册中心
+p21
+```
+https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme-zh.md
+
+```
