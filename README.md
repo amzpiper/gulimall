@@ -163,5 +163,30 @@ p20
 注册中心：每个微服务注册到这里，如果服务调用服务先去注册中心看有哪些机器的商品服务，然后挑一个远程调用;Eureka
 配置中心：比如10台机器上都有商品服务，修改配置希望再配置中心集中配置，实时修改;Spring Cloud Config
 网关：前端请求进行统一的鉴权、过滤、路由，由网关找服务;Zuul,Hystrix
-这里使用Spring Cloud Alibaba
+这里使用Spring Cloud Alibaba：
+https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
+
+https://github.com/alibaba/Nacos
+Spring Cloud Alibaba-Nacos:注册中心
+Spring Cloud Alibaba-Nacos:配置中心
+
+https://spring.io/projects/spring-cloud-netflix
+Spring Cloud Ribbon:负载均衡-NETFLIX
+spring-cloud-loadbalancer
+spring-cloud-loadbalancer 已经取代了 ribbon
+
+https://spring.io/projects/spring-cloud-openfeign
+Spring Cloud Feign:声明式HTTP客户端(调用远程服务)-OpenFeign
+
+https://github.com/alibaba/Sentinel
+Spring Cloud Alibaba-Sentinel:服务容错（限流、降级、熔断）
+
+https://spring.io/projects/spring-cloud-gateway
+Spring Cloud Gateway:API网关(webflux编程模式)
+
+https://spring.io/projects/spring-cloud-sleuth
+Spring Cloud Sleuth:调用链监控
+
+https://github.com/seata/seata
+Spring Cloud Alibaba-Seate:原Fescar，分布式解决方案
 ```
