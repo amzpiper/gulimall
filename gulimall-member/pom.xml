@@ -21,8 +21,8 @@
 
     <dependencies>
         <dependency>
-            <artifactId>gulimall-common</artifactId>
             <groupId>com.atguigu.gulimall</groupId>
+            <artifactId>gulimall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

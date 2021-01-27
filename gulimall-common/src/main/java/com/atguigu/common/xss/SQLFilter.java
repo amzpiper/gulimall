@@ -16,6 +16,7 @@ import org.apache.commons.lang.StringUtils;
  *
  * @author Mark sunlightcs@gmail.com
  */
+@SuppressWarnings("unchecked")
 public class SQLFilter {
 
     /**

@@ -9,19 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @MapperScan("com.atguigu.gulimall.member.dao")
-@SpringBootApplication
 @EnableDiscoveryClient
+@SpringBootApplication
 public class GulimallMemberApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GulimallMemberApplication.class, args);
     }
 
-    @RestController
-    class EchoController {
-        @GetMapping(value = "/echo/{string}")
-        public String echo(@PathVariable String string) {
-            return string;
-        }
-    }
 }
