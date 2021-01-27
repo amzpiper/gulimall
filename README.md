@@ -195,5 +195,5 @@ Spring Cloud Alibaba-Seate:原Fescar，分布式解决方案
 p21
 ```
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme-zh.md
-
+配置地址、应用名
 ```
