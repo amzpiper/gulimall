@@ -7,13 +7,13 @@
         <groupId>com.atguigu.gulimall</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
+    <version>0.0.1-SNAPSHOT</version>
     <artifactId>gulimall-common</artifactId>
     <description>每个微服务公共的依赖、bean、工具类等</description>
 
     <properties>
-        <java.version>11</java.version>
-        <spring-cloud.version>2020.0.0-M6</spring-cloud.version>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

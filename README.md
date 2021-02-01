@@ -198,3 +198,13 @@ p21
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme-zh.md
 配置地址、应用名
 ```
+## 14、
+p22
+```
+1)引入openfeign
+2)
+    编写1个服务接口，告诉springcloud这个接口需要调用远程服务
+    声明接口的每一个方法都是调用哪一个服务的哪一个请求
+3)开启远程调用功能 
+@EnableFeignClients
+```

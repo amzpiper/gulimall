@@ -1,6 +1,7 @@
 package com.atguigu.gulimall.coupon.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -42,6 +43,12 @@ public class CouponController {
         return R.ok().put("page", page);
     }
 
+    @RequestMapping("/member/list")
+    public R membersCoupons() {
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setCouponName("满100减10");
+        return R.ok().put("coupons", Arrays.asList(couponEntity));
+    }
 
     /**
      * 信息
@@ -50,7 +57,6 @@ public class CouponController {
     //@RequiresPermissions("coupon:coupon:info")
     public R info(@PathVariable("id") Long id){
 		CouponEntity coupon = couponService.getById(id);
-
         return R.ok().put("coupon", coupon);
     }
 
