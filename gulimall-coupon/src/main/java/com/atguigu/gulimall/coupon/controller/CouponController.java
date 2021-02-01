@@ -36,7 +36,6 @@ public class CouponController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("coupon:coupon:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = couponService.queryPage(params);
 
