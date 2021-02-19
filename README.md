@@ -195,16 +195,32 @@ Spring Cloud Alibaba-Seate:原Fescar，分布式解决方案
 ## 13、分布式组件 -SpringCloud Alibaba-Nacos-注册中心
 p21
 ```
+https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme-zh.md
 配置地址、应用名
+1.引入 Nacos Discovery Starter。
+2.在应用的 /src/main/resources/application.properties 配置文件中配置 Nacos Server 地址
+spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+配置yml:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 39.106.63.189:8848
+  application:
+    name: gulimall-coupon
+3.使用 @EnableDiscoveryClient 注解开启服务注册与发现功能
 ```
 ## 14、分布式组件-SpringCloud-OpenFeign测试远程调用
 p22
 ```
+从注册中心中获取对方服务所在位置。Feign是HTTP客户端
+想要嗲用别的服务
 1)引入openfeign
-2)编写1个服务接口，告诉springcloud这个接口需要调用远程服务,声明接口的每一个方法都是调用哪一个服务的哪一个请求
+2)编写1个服务接口。告诉springcloud这个接口需要调用远程服务:声明接口的每一个方法都是调用哪一个服务的哪一个请求
 3)开启远程调用功能 
 @EnableFeignClients
+完成了使用Nacos完成注册中心，并测试了远程调用功能。
+
 问题：
 引用本地其他项目找不到问题，配置xml
 <groupId>com.atguigu.gulimall</groupId>
@@ -212,4 +228,45 @@ p22
 <artifactId>gulimall-common</artifactId>
 <packaging>jar</packaging>
 maven安装install，安装到本地仓库后。可以引用成功了。
+```
+## 15、分布式组件-SpringCloud-Nacos配置中心-简单示例
+p23
+```
+https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
+https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-config-example/readme-zh.md
+1.首先，修改 pom.xml 文件，引入 Nacos Config Starter。
+ <dependency>
+     <groupId>com.alibaba.cloud</groupId>
+     <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+ </dependency>
+2.在应用的 /src/main/resources/bootstrap.properties 配置文件中配置 Nacos Config 元数据
+#服务名称
+spring.application.name=nacos-config-example
+#配置中心地址
+spring.cloud.nacos.config.server-addr=127.0.0.1:8848
+3.在配置列表中添加gulimall-coupon.properties配置
+添加当前应用名.properties的数据集(Data Id)
+在其中添加任何配置
+4.添加 @RefreshScope 打开动态刷新功能,实现动态获取
+使用 @Value 注解来将对应的配置注入到 SampleController 的 userName 和 age 字段
+@RefreshScope
+ class SampleController {
+ 	@Value("${user.name}")
+ 	String userName;
+
+ 	@Value("${user.age}")
+ 	int age;
+ }
+如果配置中都配置类相同的项，优先使用配置中心的项.
+```
+## 16、分布式组件-SpringCloud-Nacos配置中心-更多细节
+p24
+```
+1.命名空间:配置隔离
+默认是public，所有的配置都在这里;
+比如：开发、生产、测试都有不同的配置。则需要创建更多的命名空间。
+默认使用public命名空间，可以在bootstrap中国修改配置.
+2.配置集
+3.配置集ID
+4.配置集分组
 ```

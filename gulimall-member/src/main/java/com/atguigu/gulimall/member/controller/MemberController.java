@@ -44,6 +44,7 @@ public class MemberController {
         return R.ok().put("member", memberEntity).put("coupons", couponFeignService.membersCoupons().get("coupons"));
     }
 
+
     /**
      * 列表
      */
