@@ -32,9 +32,11 @@ public class MemberController {
     @Autowired
     private MemberService memberService;
 
+    //远程调用服务
     @Autowired
     CouponFeignService couponFeignService;
 
+    //测试远程调用
     @RequestMapping("/coupons")
     public R test() {
         MemberEntity memberEntity = new MemberEntity();

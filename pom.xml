@@ -8,12 +8,8 @@
     <name>gulimall</name>
     <description>聚合服务</description>
 
-    <properties>
-        <java.version>11</java.version>
-        <spring-cloud.version>2020.0.0-M6</spring-cloud.version>
-    </properties>
-
     <packaging>pom</packaging>
+
     <modules>
         <module>gulimall-coupon</module>
         <module>gulimall-member</module>

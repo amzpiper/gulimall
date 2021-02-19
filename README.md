@@ -104,7 +104,7 @@ spring cloud routing/openfeign
 ```
 
 ### 7、数据库设计
-```shell
+```
 #每个微服务之操作自己的数据库。
 优惠/营销数据库：gulimall_sms
 商品数据库：gulimall_pms
@@ -198,13 +198,18 @@ p21
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme-zh.md
 配置地址、应用名
 ```
-## 14、
+## 14、分布式组件-SpringCloud-OpenFeign测试远程调用
 p22
 ```
 1)引入openfeign
-2)
-    编写1个服务接口，告诉springcloud这个接口需要调用远程服务
-    声明接口的每一个方法都是调用哪一个服务的哪一个请求
+2)编写1个服务接口，告诉springcloud这个接口需要调用远程服务,声明接口的每一个方法都是调用哪一个服务的哪一个请求
 3)开启远程调用功能 
 @EnableFeignClients
+问题：
+引用本地其他项目找不到问题，配置xml
+<groupId>com.atguigu.gulimall</groupId>
+<version>0.0.1-SNAPSHOT</version>
+<artifactId>gulimall-common</artifactId>
+<packaging>jar</packaging>
+maven安装install，安装到本地仓库后。可以引用成功了。
 ```
