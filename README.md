@@ -314,4 +314,6 @@ Here, you can modify requests and responses before or after sending the downstre
 网关过滤器：过滤请求和响应，信息都可以修改。
 总结：请求到达网关，网关利用断言判定这次请求是否符合路由规则，符合就路由到指定地方，不过都要经过过滤器。
 难点：定义路由规则，配置断言判定，使用那些filter？
+
+网关要把自己注册到注册中心在，也要发现其他服务的位置
 ```
