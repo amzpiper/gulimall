@@ -234,6 +234,7 @@ p23
 ```
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-config-example/readme-zh.md
+一、如何使用nacos最为配置中心
 1.首先，修改 pom.xml 文件，引入 Nacos Config Starter。
  <dependency>
      <groupId>com.alibaba.cloud</groupId>
@@ -244,10 +245,10 @@ https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba
 spring.application.name=nacos-config-example
 #配置中心地址
 spring.cloud.nacos.config.server-addr=127.0.0.1:8848
-3.在配置列表中添加gulimall-coupon.properties配置
-添加当前应用名.properties的数据集(Data Id)
-在其中添加任何配置
-4.添加 @RefreshScope 打开动态刷新功能,实现动态获取
+3.在配置列表中添加数据集gulimall-coupon.properties配置
+添加当前应用名.properties的数据集(Data Id),在其中添加任何配置
+4.动态获取配置:
+添加 @RefreshScope 打开动态刷新功能,实现动态获取
 使用 @Value 注解来将对应的配置注入到 SampleController 的 userName 和 age 字段
 @RefreshScope
  class SampleController {
@@ -262,13 +263,37 @@ spring.cloud.nacos.config.server-addr=127.0.0.1:8848
 ## 16、分布式组件-SpringCloud-Nacos配置中心-更多细节
 p24
 ```
+二、Nacos配置中心-更多细节:
 概念:
 1.命名空间:配置隔离
-默认是public，所有的配置都在这里;
-比如：开发、生产、测试都有不同的配置。则需要创建更多的命名空间。
-默认使用public命名空间，可以在bootstrap中国修改配置.
-2.配置集
-3.配置集ID
-4.配置集分组
+默认是public，所有的新增的配置都在这里;
+注意：
+    1.比如：开发、生产、测试都有不同的配置。则需要创建更多的命名空间。
+      默认使用public命名空间，可以在bootstrap中修改配置：spring.cloud.nacos.config.namespace=6b5d2efc-844c-423c-a0ca-cc259ddb8804
+    2.每个微服务之间互相隔离，每个微服务都创建自己的命名空间，只加载自己命名空间下的配置
 
+2.配置集:
+一组相关不相关的配置项的集合。
+
+3.配置集ID:
+以前所有配置集合在文件中，id相当于文件名。
+现在新增配置时的dataID叫配置集ID。类似配置文件名
+
+4.配置分组*:
+默认配置集都属于DEFAULT_GROUP组，组可以随意定制，可以随意切换。
+创建配置时输入组。
+```
+p25
+```
+三、同时加载多个配置集
+当微服务不断壮大，要拆分为多个配置。
+让微服务启动加载多个配置文件,
+spring.cloud.nacos.config.ext-config[0].data-id=datasource.yml
+spring.cloud.nacos.config.ext-config[0].group=DOUBLE_GROUP
+#默认false
+spring.cloud.nacos.config.ext-config[0].refresh=true
+可以把application.yml注释掉。
+1）微服务中的任何配置都可以放到配置中心中
+2）只需要在bootstrap.properties中说明加载那些配置文件即可。
+3）@Value、@ConfigurationProperties，以前springboot从配置文件中获取值的注解都能从配置中心中获取且优先
 ```
