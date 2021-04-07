@@ -117,8 +117,7 @@ sudo docker update redis --restart=always
 sudo docker update mysql --restart=always
 ```
 
-## 8、人人开源搭建后台管理系统
-p16
+## p16、人人开源搭建后台管理系统
 ```
 java后台管理系统
 renren-fast
@@ -128,10 +127,11 @@ https://gitee.com/renrenio/renren-fast
 renren-fast-vue
 https://gitee.com/renrenio/renren-fast-vue
 ```
-## 9、逆向工程搭建&使用
-p17
+
+## p17、逆向工程搭建&使用
 ```
 https://gitee.com/renrenio/renren-generator
+打开renren-generator
 生成的代码main等
 创建gulimall-common maven项目把公共引用的类放到这里
 其他微服务引用gulimall-common
@@ -139,8 +139,8 @@ https://gitee.com/renrenio/renren-generator
 注释掉generator的模板
 修改数据库、包名字、模块名、表前缀
 ```
-## 10、配置测试微服务的CRUD
-p18
+
+## p18、配置测试微服务的CRUD
 ```
 1.整合mybatis plus
 1).导入以来到common
@@ -153,13 +153,13 @@ p18
         告诉mybatisplus配置映射文件位置
         配置自增
 ```
-## 11、逆向生成所有微服务的CRUD
-p19
+
+## p19、逆向生成所有微服务的CRUD
+```
+前面给商品服务生产了CRUD代码，这里生产其他的所有微服务的代码
 ```
 
-```
-## 12、分布式组件 -SpringCloud Alibaba简介
-p20
+## p20、分布式组件 -SpringCloud Alibaba简介
 ```
 注册中心：每个微服务注册到这里，如果服务调用服务先去注册中心看有哪些机器的商品服务，然后挑一个远程调用;Eureka
 配置中心：比如10台机器上都有商品服务，修改配置希望再配置中心集中配置，实时修改;Spring Cloud Config
@@ -192,8 +192,7 @@ https://github.com/seata/seata
 Spring Cloud Alibaba-Seate:原Fescar，分布式解决方案
 ```
 
-## 13、分布式组件 -SpringCloud Alibaba-Nacos-注册中心
-p21
+## p21、分布式组件 -SpringCloud Alibaba-Nacos-注册中心
 ```
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme-zh.md
@@ -210,8 +209,7 @@ spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
     name: gulimall-coupon
 3.使用 @EnableDiscoveryClient 注解开启服务注册与发现功能
 ```
-## 14、分布式组件-SpringCloud-OpenFeign测试远程调用
-p22
+## p22、分布式组件-SpringCloud-OpenFeign测试远程调用
 ```
 从注册中心中获取对方服务所在位置。Feign是HTTP客户端
 想要嗲用别的服务
@@ -229,8 +227,7 @@ p22
 <packaging>jar</packaging>
 maven安装install，安装到本地仓库后。可以引用成功了。
 ```
-## 15、分布式组件-SpringCloud-Nacos配置中心-简单示例
-p23
+## p23、分布式组件-SpringCloud-Nacos配置中心-简单示例
 ```
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-config-example/readme-zh.md
@@ -260,8 +257,7 @@ spring.cloud.nacos.config.server-addr=127.0.0.1:8848
  }
 如果配置中都配置类相同的项，优先使用配置中心的项.
 ```
-## 16、分布式组件-SpringCloud-Nacos配置中心-更多细节
-p24
+## p24、分布式组件-SpringCloud-Nacos配置中心-更多细节
 ```
 二、Nacos配置中心-更多细节:
 概念:
@@ -283,7 +279,7 @@ p24
 默认配置集都属于DEFAULT_GROUP组，组可以随意定制，可以随意切换。
 创建配置时输入组。
 ```
-p25
+## p25、分布式组件-SpringCloud-Nacos配置中心-加载多个配置集
 ```
 三、同时加载多个配置集
 当微服务不断壮大，要拆分为多个配置。
@@ -296,4 +292,10 @@ spring.cloud.nacos.config.ext-config[0].refresh=true
 1）微服务中的任何配置都可以放到配置中心中
 2）只需要在bootstrap.properties中说明加载那些配置文件即可。
 3）@Value、@ConfigurationProperties，以前springboot从配置文件中获取值的注解都能从配置中心中获取且优先
+#开发期间在本地先，等上线再放在配置中心中.
+```
+
+## p26、分布式组件-SpringCloud-Gateway网关核心概念&原理
+```
+
 ```
