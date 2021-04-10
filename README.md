@@ -318,5 +318,19 @@ Here, you can modify requests and responses before or after sending the downstre
 ## p27、分布式组件-SpringCloud-Gateway-创建&测试API网关
 ```
 网关要把自己注册到注册中心在，也要发现其他服务的位置
-
+/**
+ * 1、开启网关服务注册发现,配置nacos注册中心地址
+ * @EnableDiscoveryClient
+ * 2、排除数据库自动配置
+ * exclude = {DataSourceAutoConfiguration.class}
+ */
+localhost:88/?url=baidu
+```
+## p28、前端基础
+```
+前端工具：
+vscod
+js
+webpack
+npm
 ```
