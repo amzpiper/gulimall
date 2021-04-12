@@ -337,5 +337,13 @@ npm
 
 ## p45、商品服务-API-三级分类-查询-递归树形结构数据获取
 ```
+CategoryServiceImpl
+```
+
+## p46、商品服务-API-三级分类-配置网络路由与路径重写
+```
+人人开源路由规则
+product/category会变成product-category
+sys-role对应目录为renren-fast-vue\src\views\modules\sys
 
 ```
