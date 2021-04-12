@@ -346,4 +346,7 @@ CategoryServiceImpl
 product/category会变成product-category
 sys-role对应目录为renren-fast-vue\src\views\modules\sys
 
+nacos还有问题，是因为配置中心没有配置
+
+增加路由规则
 ```
