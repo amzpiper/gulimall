@@ -350,3 +350,22 @@ nacos还有问题，是因为配置中心没有配置
 
 增加路由规则
 ```
+## p47、商品服务-API-三级分类-网关统一-配置跨域
+```
+跨域：
+指浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对javascript施加的安全限制。
+同源策略：
+协议、域名、端口其中一个不同就跨域。
+OPTION请求预见。
+解决跨域：
+1、使用ngnix配置为同一域
+静态请求：http:nginx/xx
+动态请求：http:nginx/api/xx
+2、配置每次请求允许跨域
+2.1、添加响应头
+Access-Control-Allow-Orign
+Access-Control-Allow-Methods(我们用这个)
+Access-Control-Allow-Credentials
+Access-Control-Allow-Headers
+卸载网关中统一配置跨域
+```
