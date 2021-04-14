@@ -371,5 +371,19 @@ Access-Control-Allow-Headers
 ```
 ## p48、商品服务-API-三级分类-查询树形三级分类数据
 ```
-
+在网关中配置商品服务的路由配置
+- id: product_route
+  uri: lb://gulimall-product
+  predicates:
+    - Path=/api/product/**
+  filters:
+    - RewritePath=/api(?<segment>/?.*), /$\{segment}
+配置商品服务的注册发现
+重启网关
+报异常：
+{
+"msg": "invalid token",
+"code": 401
+}
+因为请求被/api/**先拦截了，需要改变路由顺序，精确路由放高优先级
 ```
