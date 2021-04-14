@@ -369,3 +369,7 @@ Access-Control-Allow-Credentials
 Access-Control-Allow-Headers
 卸载网关中统一配置跨域
 ```
+## p48、商品服务-API-三级分类-查询树形三级分类数据
+```
+
+```

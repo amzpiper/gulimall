@@ -18,6 +18,9 @@ spring:
             - Path=/api/**
           filters:
             - RewritePath=/api(?<segment>/?.*), /renren-fast/$\{segment}
+
+        - id: product_route
+          uri: lb://
 #      globalcors:
 #        cors-configurations:
 #          '[/**]':
