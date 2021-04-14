@@ -1,8 +1,5 @@
 spring:
   cloud:
-    nacos:
-      discovery:
-        server-addr: 39.106.63.189:8848
     gateway:
       routes:
         - id: test_route
@@ -21,11 +18,32 @@ spring:
             - Path=/api/**
           filters:
             - RewritePath=/api(?<segment>/?.*), /renren-fast/$\{segment}
-
-# 前端项目都带上api前缀，/api,都先路由到renren-fast
+#      globalcors:
+#        cors-configurations:
+#          '[/**]':
+#            # 允许携带认证信息
+#            # 允许跨域的源(网站域名/ip)，设置*为全部
+#            # 允许跨域请求里的head字段，设置*为全部
+#            # 允许跨域的method， 默认为GET和OPTIONS，设置*为全部
+#            # 跨域允许的有效期
+#            allow-credentials: true
+#            allowed-origins: "*"
+#            # - "http://localhost:13009"
+#            # - "http://localhost:13010"
+#            allowed-headers: "*"
+#            allowed-methods:
+#              - OPTIONS
+#              - GET
+#              - POST
+#            max-age: 3600
+#            # 允许response的head信息
+#            # 默认仅允许如下6个：
+#            #     Cache-Control
+#            #     Content-Language
+#            #     Content-Type
+#            #     Expires
+#            #     Last-Modified
+#            #     Pragma
+#            #exposed-headers:
+  # 前端项目都带上api前缀，/api,都先路由到renren-fast
 # 路径重写
-
-  application:
-    name: gulimall-gateway
-server:
-  port: 88

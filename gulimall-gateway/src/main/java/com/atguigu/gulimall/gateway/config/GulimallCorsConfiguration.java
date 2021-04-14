@@ -1,5 +1,7 @@
 package com.atguigu.gulimall.gateway.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.gateway.config.GlobalCorsProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -23,10 +25,9 @@ public class GulimallCorsConfiguration {
         corsConfiguration.addAllowedOrigin("*");
         corsConfiguration.setAllowCredentials(true);
 
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource(new PathPatternParser());
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**",corsConfiguration);
 
         return new CorsWebFilter(source);
     }
-
 }
