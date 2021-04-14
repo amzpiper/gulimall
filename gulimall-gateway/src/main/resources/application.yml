@@ -45,5 +45,5 @@ spring:
 #            #     Last-Modified
 #            #     Pragma
 #            #exposed-headers:
-  # 前端项目都带上api前缀，/api,都先路由到renren-fast
+# 前端项目都带上api前缀，/api,都先路由到renren-fast
 # 路径重写
