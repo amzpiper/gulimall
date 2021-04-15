@@ -22,3 +22,8 @@ mybatis-plus:
 
 server:
   port: 10001
+
+#打印日志,修改级别
+logging:
+  level:
+    com.atguigu.gulimall: debug
