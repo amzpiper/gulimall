@@ -387,3 +387,20 @@ Access-Control-Allow-Headers
 }
 因为请求被/api/**先拦截了，需要改变路由顺序，精确路由放高优先级
 ```
+## p50、商品服务-API-三级分类-删除-逻辑删除
+```
+逻辑删除步骤：
+文档：
+https://baomidou.com/guide/logic-delete.html
+1.配置全局逻辑删除规则(可省略)
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+2.配置全局组件(可选)(可省略)
+3.给实体类Bean加注
+@TableLogic
+private Integer deleted;
+```

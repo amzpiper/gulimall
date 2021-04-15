@@ -77,4 +77,16 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         }).collect(Collectors.toList());
     }
 
+    /**
+     * 自定义删除分类
+     *
+     * @param asList
+     */
+    @Override
+    public void removeMenuByIds(List<Long> asList) {
+        //TODO 1、检查当前删除的菜单是否被别的地方引用
+
+        //开发期间多为逻辑删除
+        baseMapper.deleteBatchIds(asList);
+    }
 }
