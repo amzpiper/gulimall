@@ -44,7 +44,7 @@ public class CategoryController {
 
 
     /**
-     * 信息
+     * 查询单个分类信息
      */
     @RequestMapping("/info/{catId}")
     //@RequiresPermissions("product:category:info")
